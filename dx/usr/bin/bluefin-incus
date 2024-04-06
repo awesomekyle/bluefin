@@ -50,28 +50,29 @@ else
     echo "root:1000:1" | sudo tee -a /etc/subuid
 fi
 
+# No longer needed: https://github.com/ganto/copr-lxc4/issues/41
 # check to see if SELinux is set to permissive or disabled
 
-echo ""
-echo "Checking SELinux status"
-SELINUX_STATUS=$(getenforce)
+# echo ""
+# echo "Checking SELinux status"
+# SELINUX_STATUS=$(getenforce)
 
-if [ "$SELINUX_STATUS" = "Enforcing" ]
-then
-    echo ""
-    echo "SELinux must be set to Permissive or Disabled to enable Incus"
-    echo "Choose your new SELinux state:"
-    OPTION=$(gum choose Permissive Disabled Cancel)
-    if [ "$OPTION" = "Cancel" ]
-    then
-        echo "You have chosen to cancel the Incus installation process"
-        exit
-    else
-        sudo setenforce $OPTION
-        echo "You must reboot before continuing. You can run this script again."
-        exit
-    fi
-fi
+# if [ "$SELINUX_STATUS" = "Enforcing" ]
+# then
+#     echo ""
+#     echo "SELinux must be set to Permissive or Disabled to enable Incus"
+#     echo "Choose your new SELinux state:"
+#     OPTION=$(gum choose Permissive Disabled Cancel)
+#     if [ "$OPTION" = "Cancel" ]
+#     then
+#         echo "You have chosen to cancel the Incus installation process"
+#         exit
+#     else
+#         sudo setenforce $OPTION
+#         echo "You must reboot before continuing. You can run this script again."
+#         exit
+#     fi
+# fi
 
 # create necessary directories for lxcfs and incus
 

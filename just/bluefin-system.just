@@ -145,10 +145,9 @@ ptyxis-transparency opacity="0.95":
       printf "Value must be between 0 and 1: %s.\n" "{{ opacity }}"
     fi
 
-# Configure docker,incus-admin,lxd,libvirt container manager permissions
+# Configure incus-admin,lxd,libvirt container manager permissions
 dx-group:
-    sudo usermod -aG docker $USER
     sudo usermod -aG incus-admin $USER
     sudo usermod -aG lxd $USER
     sudo usermod -aG libvirt $USER
-    @echo "Logout to use docker, incus-admin, lxd, libvirt"
+    @echo "Logout to use incus-admin, lxd, libvirt"
