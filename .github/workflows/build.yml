@@ -1,23 +1,23 @@
 name: Build and Push Image
 on:
   schedule:
-    - cron: '40 16 * * *'  # 16:40 UTC everyday
+    - cron: "40 16 * * *" # 16:40 UTC everyday
   merge_group:
   pull_request:
     branches:
       - main
       - testing
     paths-ignore:
-      - '**.md'
+      - "**.md"
   push:
     branches:
       - main
       - testing
     paths-ignore:
-      - '**.md'
+      - "**.md"
   workflow_dispatch:
 env:
-    IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
+  IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
@@ -31,14 +31,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        image_flavor: [main, nvidia, asus, asus-nvidia, framework, surface, surface-nvidia]
+        image_flavor: [main, nvidia]
         base_name: [bluefin, bluefin-dx]
-        major_version: [38, 39, 40]
+        major_version: [39, 40]
         include:
-          - major_version: 38
-            is_latest_version: false
-            is_stable_version: true
-            is_gts_version: true
           - major_version: 39
             is_latest_version: true
             is_stable_version: true
@@ -47,16 +43,6 @@ jobs:
             is_latest_version: false
             is_stable_version: false
             is_gts_version: false
-        exclude:
-          - major_version: 38
-            image_flavor: asus
-          - major_version: 38
-            image_flavor: asus-nvidia
-          - major_version: 38
-            image_flavor: surface
-          - major_version: 38
-            image_flavor: surface-nvidia
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -169,7 +155,7 @@ jobs:
           labels: |
             org.opencontainers.image.title=${{ env.IMAGE_NAME }}
             org.opencontainers.image.version=${{ steps.labels.outputs.VERSION }}
-            org.opencontainers.image.description=An interpretation of the Ubuntu spirit built on Fedora technology 
+            org.opencontainers.image.description=An interpretation of the Ubuntu spirit built on Fedora technology
             io.artifacthub.package.readme-url=https://raw.githubusercontent.com/ublue-os/bluefin/bluefin/README.md
             io.artifacthub.package.logo-url=https://avatars.githubusercontent.com/u/120078124?s=200&v=4
 

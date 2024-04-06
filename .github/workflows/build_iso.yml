@@ -20,30 +20,13 @@ jobs:
         image_name:
           - bluefin
           - bluefin-nvidia
-          - bluefin-asus
-          - bluefin-asus-nvidia
-          - bluefin-surface
-          - bluefin-surface-nvidia
           - bluefin-dx
           - bluefin-dx-nvidia
-          - bluefin-dx-asus
-          - bluefin-dx-surface
-          - bluefin-dx-asus-nvidia
-          - bluefin-dx-surface-nvidia
-        major_version: [38, 39]
-        exclude:
-          - major_version: 38
-            image_name: bluefin-asus
-          - major_version: 38
-            image_name: bluefin-asus-nvidia
-          - major_version: 38
-            image_name: bluefin-dx-asus
-          - major_version: 38
-            image_name: bluefin-dx-asus-nvidia
+        major_version: [39, 40]
         include:
-          - major_version: 38
-            is_gts_version: true
           - major_version: 39
+            is_gts_version: false
+          - major_version: 40
             is_gts_version: false
     steps:
       - name: Free Disk Space (Ubuntu)
@@ -115,11 +98,11 @@ jobs:
           arch: x86_64
           image_name: ${{ matrix.image_name }}
           image_repo: ghcr.io/ublue-os
-          variant: 'Silverblue'
+          variant: "Silverblue"
           version: ${{ matrix.major_version }}
           image_tag: ${{ steps.generate-tag.outputs.tag }}
-          secure_boot_key_url: 'https://github.com/ublue-os/akmods/raw/main/certs/public_key.der'
-          enrollment_password: 'ublue-os'
+          secure_boot_key_url: "https://github.com/ublue-os/akmods/raw/main/certs/public_key.der"
+          enrollment_password: "ublue-os"
           iso_name: ${{ matrix.image_name }}-${{ steps.generate-tag.outputs.tag }}
           enable_cache_dnf: "false"
           enable_cache_skopeo: "false"
