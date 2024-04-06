@@ -43,7 +43,6 @@
 				"samba",
 				"solaar",
 				"stress-ng",
-				"tailscale",
 				"tmux",
 				"usbmuxd",
 				"wireguard-tools",
@@ -67,10 +66,6 @@
 				"containerd.io",
 				"dbus-x11",
 				"devpod",
-				"docker-ce",
-				"docker-ce-cli",
-				"docker-buildx-plugin",
-				"docker-compose-plugin",
 				"edk2-ovmf",
 				"genisoimage",
 				"google-droid-sans-mono-fonts",
@@ -83,8 +78,6 @@
 				"kcli",
 				"libvirt",
 				"lxc",
-				"lxd-agent",
-				"lxd",
 				"mozilla-fira-mono-fonts",
 				"p7zip-plugins",
 				"p7zip",
@@ -125,7 +118,6 @@
 	"38": {
 		"include": {
 			"bluefin": [
-				"gnome-shell-extension-tailscale-status"
 			],
 			"bluefin-dx": [
 				"distrobuilder",
@@ -135,7 +127,6 @@
 		},
 		"exclude": {
 			"bluefin": [
-				"podman-docker"
 			],
 			"bluefin-dx": []
 		}
@@ -143,7 +134,6 @@
 	"39": {
 		"include": {
 			"bluefin": [
-				"gnome-shell-extension-tailscale-gnome-qs",
 				"input-leap",
 				"nautilus-open-any-terminal",
 				"tuned",
@@ -159,7 +149,6 @@
 		},
 		"exclude": {
 			"bluefin": [
-				"podman-docker",
 				"gnome-terminal-nautilus",
 				"power-profiles-daemon",
 				"tlp",
@@ -172,7 +161,6 @@
 	"40": {
 		"include": {
 			"bluefin": [
-				"gnome-shell-extension-tailscale-gnome-qs",
 				"input-leap",
 				"nautilus-open-any-terminal",
 				"tuned",
@@ -185,7 +173,6 @@
 		},
 		"exclude": {
 			"bluefin": [
-				"podman-docker",
 				"gnome-terminal-nautilus",
 				"power-profiles-daemon",
 				"tlp",
