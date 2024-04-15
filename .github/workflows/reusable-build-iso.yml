@@ -7,7 +7,7 @@ on:
         required: true
         type: string
       fedora_version:
-        description: 'The Fedora release version: 38, 39, 40, etc'
+        description: "The Fedora release version: 38, 39, 40, etc"
         required: true
         type: string
 
@@ -28,10 +28,6 @@ jobs:
         image_flavor:
           - main
           - nvidia
-          - asus
-          - asus-nvidia
-          - surface
-          - surface-nvidia
         base_name:
           - ${{ inputs.brand_name }}
           - ${{ inputs.brand_name }}-dx
@@ -149,8 +145,8 @@ jobs:
           variant: ${{ env.VARIANT }}
           version: ${{ matrix.fedora_version }}
           image_tag: ${{ steps.generate-tag.outputs.tag }}
-          secure_boot_key_url: 'https://github.com/ublue-os/akmods/raw/main/certs/public_key.der'
-          enrollment_password: 'ublue-os'
+          secure_boot_key_url: "https://github.com/ublue-os/akmods/raw/main/certs/public_key.der"
+          enrollment_password: "ublue-os"
           iso_name: ${{ env.IMAGE_NAME }}-${{ steps.generate-tag.outputs.tag }}.iso
           enable_cache_dnf: "false"
           enable_cache_skopeo: "false"
