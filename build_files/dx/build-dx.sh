@@ -3,8 +3,6 @@
 
 set -oue pipefail
 
-# Apply IP Forwarding before installing Docker to prevent messing with LXC networking
-sysctl -p
 
 . /tmp/build/copr-repos-dx.sh
 . /tmp/build/packages-dx.sh

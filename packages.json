@@ -33,7 +33,6 @@
         "samba",
         "solaar",
         "stress-ng",
-        "tailscale",
         "tmux",
         "usbmuxd",
         "wireguard-tools",
@@ -74,10 +73,6 @@
         "code",
         "containerd.io",
         "dbus-x11",
-        "docker-ce",
-        "docker-ce-cli",
-        "docker-buildx-plugin",
-        "docker-compose-plugin",
         "edk2-ovmf",
         "genisoimage",
         "google-droid-sans-mono-fonts",
@@ -130,14 +125,11 @@
   },
   "38": {
     "include": {
-      "silverblue": [
-        "gnome-shell-extension-blur-my-shell",
-        "gnome-shell-extension-tailscale-status"
-      ],
+      "silverblue": [],
       "dx": ["distrobuilder", "devpod", "podman-plugins"]
     },
     "exclude": {
-      "silverblue": ["podman-docker"],
+      "silverblue": [],
       "dx": []
     }
   },
@@ -150,15 +142,11 @@
         "tuned-utils",
         "tuned-profiles-atomic"
       ],
-      "silverblue": [
-        "gnome-shell-extension-blur-my-shell",
-        "gnome-shell-extension-tailscale-gnome-qs",
-        "nautilus-open-any-terminal"
-      ],
+      "silverblue": ["nautilus-open-any-terminal"],
       "dx": ["distrobuilder", "devpod", "podman-plugins"]
     },
     "exclude": {
-      "all": ["podman-docker", "power-profiles-daemon", "tlp", "tlp-rdw"],
+      "all": ["power-profiles-daemon", "tlp", "tlp-rdw"],
       "silverblue": ["gnome-terminal-nautilus"],
       "dx": []
     }
@@ -172,14 +160,11 @@
         "tuned-utils",
         "tuned-profiles-atomic"
       ],
-      "silverblue": [
-        "gnome-shell-extension-tailscale-gnome-qs",
-        "nautilus-open-any-terminal"
-      ],
+      "silverblue": ["nautilus-open-any-terminal"],
       "dx": []
     },
     "exclude": {
-      "all": ["podman-docker", "power-profiles-daemon", "tlp", "tlp-rdw"],
+      "all": ["power-profiles-daemon", "tlp", "tlp-rdw"],
       "silverblue": ["gnome-terminal-nautilus"],
       "dx": []
     }
