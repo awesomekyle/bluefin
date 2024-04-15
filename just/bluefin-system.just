@@ -98,7 +98,7 @@ configure-shell ACTION="":
     if [ -z "$OPTION" ]; then
       exit 0
     else
-      sudo usermod $USER --shell /usr/bin/$OPTION 
+      sudo usermod $USER --shell /usr/bin/$OPTION
       printf "${USER}'s shell is now %s.\n" "$(cat /etc/passwd | grep ":$UID:" | cut '-d:' '-f7')"
     fi
 
@@ -153,9 +153,8 @@ ptyxis-transparency opacity="0.95":
       printf "Value must be between 0 and 1: %s.\n" "{{ opacity }}"
     fi
 
-# Configure incus-admin,lxd,libvirt container manager permissions
+# Configure incus-admin,libvirt container manager permissions
 dx-group:
     sudo usermod -aG incus-admin $USER
-    sudo usermod -aG lxd $USER
     sudo usermod -aG libvirt $USER
-    @echo "Logout to use incus-admin, lxd, libvirt"
+    @echo "Logout to use incus-admin, libvirt"

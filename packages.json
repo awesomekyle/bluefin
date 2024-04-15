@@ -5,14 +5,10 @@
         "bash-color-prompt",
         "bcache-tools",
         "evtest",
-        "epson-inkjet-printer-escpr",
-        "epson-inkjet-printer-escpr2",
         "fastfetch",
         "fish",
         "firewall-config",
         "gcc",
-        "glow",
-        "gum",
         "hplip",
         "ifuse",
         "input-remapper",
@@ -71,7 +67,6 @@
         "cockpit-storaged",
         "cockpit-system",
         "code",
-        "containerd.io",
         "dbus-x11",
         "edk2-ovmf",
         "genisoimage",
@@ -85,8 +80,6 @@
         "kcli",
         "libvirt",
         "lxc",
-        "lxd-agent",
-        "lxd",
         "mozilla-fira-mono-fonts",
         "p7zip-plugins",
         "p7zip",
@@ -158,7 +151,8 @@
         "tuned",
         "tuned-ppd",
         "tuned-utils",
-        "tuned-profiles-atomic"
+        "tuned-profiles-atomic",
+        "containerd"
       ],
       "silverblue": ["nautilus-open-any-terminal"],
       "dx": []
@@ -166,7 +160,7 @@
     "exclude": {
       "all": ["power-profiles-daemon", "tlp", "tlp-rdw"],
       "silverblue": ["gnome-terminal-nautilus"],
-      "dx": []
+      "dx": ["containerd.io"]
     }
   }
 }
