@@ -61,6 +61,25 @@ customize-alphas=true
 max-alpha=0.8
 min-alpha=0.5
 
+[org/gnome/shell/extensions/dash-to-panel]
+animate-appicon-hover-animation-extent={'RIPPLE': 4, 'PLANK': 4, 'SIMPLE': 1}
+appicon-margin=8
+appicon-padding=0
+available-monitors=[0]
+dot-position='BOTTOM'
+group-apps=false
+group-apps-label-max-width=100
+group-apps-use-fixed-width=true
+hotkeys-overlay-combo='TEMPORARILY'
+leftbox-padding=-1
+panel-anchors='{"0":"MIDDLE"}'
+panel-lengths='{"0":100}'
+panel-sizes='{"0":24}'
+primary-monitor=0
+status-icon-padding=-1
+tray-padding=-1
+window-preview-title-position='TOP'
+
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Control><Alt>t'
 command='ptyxis --tab-with-profile=2871e8027773ae74d6c87a5f659bbc74 --new-window'
