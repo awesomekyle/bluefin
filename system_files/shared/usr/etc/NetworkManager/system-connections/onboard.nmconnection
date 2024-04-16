@@ -1,0 +1,12 @@
+[connection]
+id=Onboard
+type=ethernet
+autoconnect=false
+interface-name=onboard
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto

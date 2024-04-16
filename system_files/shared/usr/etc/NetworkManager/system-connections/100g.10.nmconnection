@@ -1,0 +1,16 @@
+[connection]
+id=100g.10
+type=vlan
+interface-name=100g.10
+
+[vlan]
+flags=1
+id=10
+parent=100g
+
+[ipv4]
+method=auto
+
+[ipv6]
+addr-gen-mode=stable-privacy
+method=auto
