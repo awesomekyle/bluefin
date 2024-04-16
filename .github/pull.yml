@@ -1,6 +1,6 @@
 version: "1"
 rules:
-  - base: mymods
+  - base: main
     upstream: ublue-os:main
     mergeMethod: merge
     mergeUnstable: false
