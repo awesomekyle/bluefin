@@ -34,19 +34,18 @@
 				"wireguard-tools",
 				"xprop",
 				"wl-clipboard",
+				"eza",
+				"ripgrep",
+				"fzf",
+				"fd-find",
 				"zsh"
 			],
 			"silverblue": [
 				"gnome-shell-extension-appindicator",
-				"gnome-shell-extension-caffeine",
-				"gnome-shell-extension-dash-to-dock",
-				"gnome-shell-extension-gsconnect",
-				"gnome-shell-extension-logo-menu",
-				"gnome-shell-extension-search-light",
+				"gnome-shell-extension-dash-to-panel",
 				"libgda-sqlite",
 				"libgda",
 				"libratbag-ratbagd",
-				"nautilus-gsconnect",
 				"yaru-theme"
 			],
 			"kinoite": [
