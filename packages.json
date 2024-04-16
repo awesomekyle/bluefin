@@ -139,11 +139,7 @@
 	"39": {
 		"include": {
 			"all": [
-				"input-leap",
-				"tuned",
-				"tuned-ppd",
-				"tuned-utils",
-				"tuned-profiles-atomic"
+				"input-leap"
 			],
 			"silverblue": [
 				"nautilus-open-any-terminal"
@@ -169,12 +165,7 @@
 	"40": {
 		"include": {
 			"all": [
-				"input-leap",
-				"tuned",
-				"tuned-ppd",
-				"tuned-utils",
-				"tuned-profiles-atomic",
-				"containerd"
+				"input-leap"
 			],
 			"silverblue": [
 				"nautilus-open-any-terminal"
