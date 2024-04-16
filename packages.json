@@ -150,11 +150,7 @@
 			]
 		},
 		"exclude": {
-			"all": [
-				"power-profiles-daemon",
-				"tlp",
-				"tlp-rdw"
-			],
+			"all": [],
 			"silverblue": [
 				"gnome-terminal-nautilus"
 			],
@@ -172,11 +168,7 @@
 			"dx": []
 		},
 		"exclude": {
-			"all": [
-				"power-profiles-daemon",
-				"tlp",
-				"tlp-rdw"
-			],
+			"all": [],
 			"silverblue": [
 				"gnome-terminal-nautilus"
 			],
