@@ -9,8 +9,11 @@ on:
       - '**.md'
       - 'system_files/kinoite/**'
   schedule:
-    - cron: '40 16 * * *'  # 16:40 UTC everyday
+    - cron: '40 17 * * *'  # 17:40 UTC everyday
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   build:
