@@ -1,5 +1,5 @@
 [org/gnome/shell]
-favorite-apps = ['org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop']
+favorite-apps = ['org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop']
 enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com']
 
 [org/gnome/desktop/background]
@@ -24,7 +24,7 @@ gtk-theme="Yaru-blue"
 font-antialiasing="rgba"
 font-name="Ubuntu 12"
 document-font-name="Ubuntu 12"
-monospace-font-name="MesloLGL Nerd Font Mono 11"
+monospace-font-name="Fira Mono 11"
 
 [org/gnome/desktop/sound]
 allow-volume-above-100-percent=true
