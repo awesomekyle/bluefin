@@ -15,6 +15,7 @@
 				"libimobiledevice",
 				"libxcrypt-compat",
 				"make",
+				"bat",
 				"mesa-libGLU",
 				"nerd-fonts",
 				"playerctl",
