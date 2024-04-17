@@ -25,11 +25,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Only nvidia and -dx are enabled for now due to limited R2 storage
         image_flavor:
-          - main
+          # - main
           - nvidia
         base_name:
-          - ${{ inputs.brand_name }}
+          # - ${{ inputs.brand_name }}
           - ${{ inputs.brand_name }}-dx
         fedora_version:
           - ${{ inputs.fedora_version }}
