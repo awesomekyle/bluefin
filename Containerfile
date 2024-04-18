@@ -34,7 +34,6 @@ COPY --from=ghcr.io/ublue-os/akmods:${AKMODS_FLAVOR}-${FEDORA_MAJOR_VERSION} /rp
 # AK: custom modifications required for downstream build
 #
 COPY ./cosign.pub /usr/etc/pki/containers/awesomekyle.pub
-COPY upstream-ublue-config/files/usr/etc/containers/policy.json /usr/etc/containers/policy.json
 COPY build_files/base build_files/custom /tmp/build/
 
 # Build, cleanup, commit.
