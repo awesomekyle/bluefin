@@ -34,11 +34,13 @@ COPY --from=ghcr.io/ublue-os/akmods:${AKMODS_FLAVOR}-${FEDORA_MAJOR_VERSION} /rp
 # AK: custom modifications required for downstream build
 #
 COPY ./cosign.pub /usr/etc/pki/containers/awesomekyle.pub
-COPY --from ghcr.io/ublue-os/config /usr/etc/containers/policy.json /usr/etc/containers/policy.json
+COPY upstream-ublue-config/files/usr/etc/containers/policy.json /usr/etc/containers/policy.json
+COPY build_files/base build_files/custom /tmp/build/
 
 # Build, cleanup, commit.
 RUN rpm-ostree cliwrap install-to-root / && \
     bash -c ". /tmp/build/build-base.sh"  && \
+    bash -c ". /tmp/build/build-custom.sh"  && \
     rm -rf /tmp/* /var/* && \
     mkdir -p /var/tmp && \
     chmod -R 1777 /var/tmp && \
