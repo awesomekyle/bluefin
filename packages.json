@@ -130,7 +130,6 @@
 			"silverblue": [],
 			"dx": [
 				"distrobuilder",
-				"devpod",
 				"podman-plugins"
 			]
 		},
@@ -149,7 +148,6 @@
 			],
 			"dx": [
 				"distrobuilder",
-				"devpod",
 				"podman-plugins"
 			]
 		},
