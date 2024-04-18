@@ -1,3 +1,0 @@
-[submodule "upstream-ublue-config"]
-	path = upstream-ublue-config
-	url = git@github.com:ublue-os/config.git
