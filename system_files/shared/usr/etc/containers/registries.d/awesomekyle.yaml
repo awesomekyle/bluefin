@@ -1,0 +1,3 @@
+docker:
+  ghcr.io/awesomekyle:
+    use-sigstore-attachments: true

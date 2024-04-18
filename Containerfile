@@ -30,6 +30,12 @@ COPY --from=ghcr.io/ublue-os/bluefin-cli /usr/share/bash-prexec /usr/share/bash-
 # COPY ublue kmods, add needed negativo17 repo and then immediately disable due to incompatibility with RPMFusion
 COPY --from=ghcr.io/ublue-os/akmods:${AKMODS_FLAVOR}-${FEDORA_MAJOR_VERSION} /rpms /tmp/akmods-rpms
 
+#
+# AK: custom modifications required for downstream build
+#
+COPY ./cosign.pub /usr/etc/pki/containers/awesomekyle.pub
+COPY --from ghcr.io/ublue-os/config /usr/etc/containers/policy.json /usr/etc/containers/policy.json
+
 # Build, cleanup, commit.
 RUN rpm-ostree cliwrap install-to-root / && \
     bash -c ". /tmp/build/build-base.sh"  && \
