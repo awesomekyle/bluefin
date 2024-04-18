@@ -3,6 +3,11 @@ id=Onboard
 type=ethernet
 autoconnect=false
 interface-name=onboard
+uuid=08a5f9a0-d27d-454e-b576-388d3f91b14f
+
+[ethernet]
+
+[proxy]
 
 [ipv4]
 method=auto

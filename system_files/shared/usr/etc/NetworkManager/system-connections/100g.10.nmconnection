@@ -2,6 +2,7 @@
 id=100g.10
 type=vlan
 interface-name=100g.10
+uuid=11665d1e-3ece-415a-814d-bdd2de93a6ee
 
 [vlan]
 flags=1
@@ -14,3 +15,7 @@ method=auto
 [ipv6]
 addr-gen-mode=stable-privacy
 method=auto
+
+[ethernet]
+
+[proxy]
