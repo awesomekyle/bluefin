@@ -2,7 +2,6 @@
 
 set -oue pipefail
 
-systemctl enable podman.socket
 systemctl enable swtpm-workaround.service
 systemctl enable bluefin-dx-groups.service
 systemctl enable --global bluefin-dx-user-vscode.service
