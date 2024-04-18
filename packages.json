@@ -50,6 +50,7 @@
 				"libgda-sqlite",
 				"libgda",
 				"libratbag-ratbagd",
+				"openssh-askpass",
 				"yaru-theme"
 			],
 			"kinoite": [
