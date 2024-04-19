@@ -26,6 +26,7 @@
 				"rclone",
 				"restic",
 				"samba-dcerpc",
+				"tailscale",
 				"neovim",
 				"samba-ldb-ldap-modules",
 				"samba-winbind-clients",
@@ -145,6 +146,7 @@
 				"input-leap"
 			],
 			"silverblue": [
+				"gnome-shell-extension-tailscale-gnome-qs",
 				"nautilus-open-any-terminal"
 			],
 			"dx": [
@@ -166,6 +168,7 @@
 				"input-leap"
 			],
 			"silverblue": [
+				"gnome-shell-extension-tailscale-gnome-qs",
 				"nautilus-open-any-terminal"
 			],
 			"dx": []

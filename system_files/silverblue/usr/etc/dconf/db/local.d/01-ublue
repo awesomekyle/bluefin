@@ -1,6 +1,6 @@
 [org/gnome/shell]
 favorite-apps = ['org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'org.gnome.Nautilus.desktop', 'code.desktop']
-enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com']
+enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com', 'tailscale@joaophi.github.com']
 
 [org/gnome/desktop/background]
 picture-uri='file:///usr/share/backgrounds/bluefin/bluefin-spring-dynamic.xml'
