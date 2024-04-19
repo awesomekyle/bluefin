@@ -13,5 +13,3 @@ jq '.transports.docker += {
     ]
     }' /usr/etc/containers/policy.json > /tmp/policy.json
 mv /tmp/policy.json /usr/etc/containers/policy.json
-
-systemctl enable incus-workaround.service
