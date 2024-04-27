@@ -57,6 +57,7 @@
 			"kinoite": [
 				"libadwaita-qt5",
 				"libadwaita-qt6",
+				"kde-runtime-docs",
 				"kdeplasma-addons",
 				"plasma-wallpapers-dynamic"
 			],
@@ -129,7 +130,9 @@
 	},
 	"38": {
 		"include": {
-			"silverblue": [],
+			"silverblue": [
+				"gnome-shell-extension-tailscale-status"
+			],
 			"dx": [
 				"distrobuilder",
 				"podman-plugins"

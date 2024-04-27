@@ -158,3 +158,17 @@ dx-group:
     sudo usermod -aG incus-admin $USER
     sudo usermod -aG libvirt $USER
     @echo "Logout to use incus-admin, libvirt"
+
+# Install system flatpaks for rebasers
+[private]
+install-system-flatpaks:
+    #!/usr/bin/bash
+    IMAGE_INFO="/usr/share/ublue-os/image-info.json"
+    BASE_IMAGE_NAME=$(jq -r '."base-image-name"' < $IMAGE_INFO)
+    if [[ ${BASE_IMAGE_NAME} == 'silverblue' ]]; then
+        FLATPAKS="bluefin_flatpaks/flatpaks"
+    elif [[ ${BASE_IMAGE_NAME} == 'kinoite' ]]; then
+        FLATPAKS="aurora_flatpaks/flatpaks"
+    fi
+    FLATPAK_LIST="$(curl https://raw.githubusercontent.com/ublue-os/bluefin/main/${FLATPAKS} | tr '\n' ' ')"
+    flatpak --system -y install ${FLATPAK_LIST}

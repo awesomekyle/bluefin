@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-set -oue pipefail
+set -ouex pipefail
 
 systemctl enable swtpm-workaround.service
 systemctl enable bluefin-dx-groups.service

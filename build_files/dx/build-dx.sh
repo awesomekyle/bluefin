@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 # shellcheck disable=SC1091
 
-set -oue pipefail
+set -ouex pipefail
 
 
 . /tmp/build/copr-repos-dx.sh
