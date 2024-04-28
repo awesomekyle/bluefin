@@ -1,37 +1,31 @@
 [Unit]
-Description=Workaround Incus not having the correct label. Note this is a Bluefin specific problem.
-Description=https://universal-blue.discourse.group/t/lxd-or-incus-without-disabling-selinux-on-bluefin/818/2
-Description=https://universal-blue.discourse.group/t/selinux-blocking-libvirtd-in-fedora-40/1129
-ConditionPathExists=/usr/bin/incus
-ConditionPathExists=/usr/bin/incus-agent
+Description=Workaround swtpm not having the correct label
+ConditionFileIsExecutable=/usr/bin/incus
+ConditionFileIsExecutable=/usr/bin/incus-agent
 ConditionPathExists=/usr/lib/incus
 After=local-fs.target
 
 [Service]
 Type=oneshot
-# Ensure /var/lib/lxcfs exists
-ExecStartPre=/usr/bin/bash -c "[ -d /var/lib/lxcfs ] || /usr/bin/mkdir -p /var/lib/lxcfs"
 # Copy if it doesn't exist
-ExecStartPre=/usr/bin/bash -c "[ -x /usr/local/bin/.incus ] || /usr/bin/cp /usr/bin/incus /usr/local/bin/.incus"
-ExecStartPre=/usr/bin/bash -c "[ -x /usr/local/bin/.incus-agent ] || /usr/bin/cp /usr/bin/incus-agent /usr/local/bin/.incus-agent"
-ExecStartPre=/usr/bin/bash -c "[ -d /usr/local/lib/.incus ] || /usr/bin/cp -r /usr/lib/incus /usr/local/lib/.incus"
+ExecStartPre=/usr/bin/bash -c "[ -x /usr/local/bin/overrides/incus ] || /usr/bin/cp /usr/bin/incus /usr/local/bin/overrides/incus"
+ExecStartPre=/usr/bin/bash -c "[ -x /usr/local/bin/overrides/incus-agent ] || /usr/bin/cp /usr/bin/incus /usr/local/bin/overrides/incus-agent"
+ExecStartPre=/usr/bin/bash -c "[ -d /usr/local/lib/overrides/incus ] || /usr/bin/cp -R /usr/bin/incus /usr/local/lib/overrides/incus"
 # This is faster than using .mount unit. Also allows for the previous line/cleanup
-ExecStartPre=/usr/bin/mount --bind /usr/local/bin/.incus /usr/bin/incus
-ExecStartPre=/usr/bin/mount --bind /usr/local/bin/.incus-agent /usr/bin/incus-agent
-ExecStartPre=/usr/bin/mount --bind /usr/local/lib/.incus /usr/lib/incus
+ExecStartPre=/usr/bin/mount --bind /usr/local/bin/overrides/incus /usr/bin/incus
+ExecStartPre=/usr/bin/mount --bind /usr/local/bin/overrides/incus-agent /usr/bin/incus-agent
+ExecStartPre=/usr/bin/mount --bind /usr/local/lib/overrides/incus /usr/lib/incus
 # Fix SELinux label
-ExecStart=/usr/sbin/restorecon -R /usr/bin/incus
-ExecStart=/usr/sbin/restorecon -R /usr/bin/incus-agent
+ExecStart=/usr/sbin/restorecon /usr/bin/incus
+ExecStart=/usr/sbin/restorecon /usr/bin/incus-agent
 ExecStart=/usr/sbin/restorecon -R /usr/lib/incus
-ExecStart=/usr/sbin/restorecon -R /var/lib/lxcfs
-ExecStart=/usr/sbin/restorecon -R /var/lib/incus
 # Clean-up after ourselves
 ExecStop=/usr/bin/umount /usr/bin/incus
 ExecStop=/usr/bin/umount /usr/bin/incus-agent
 ExecStop=/usr/bin/umount /usr/lib/incus
-ExecStop=/usr/bin/rm -r /usr/local/bin/.incus
-ExecStop=/usr/bin/rm -r /usr/local/bin/.incus-agent
-ExecStop=/usr/bin/rm -r /usr/local/lib/.incus
+ExecStop=/usr/bin/rm /usr/local/bin/overrides/incus
+ExecStop=/usr/bin/rm /usr/local/bin/overrides/incus-agent
+ExecStop=/usr/bin/rm -r /usr/local/lib/overrides/incus
 RemainAfterExit=yes
 
 [Install]
