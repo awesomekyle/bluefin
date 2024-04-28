@@ -128,21 +128,6 @@
 			"dx": []
 		}
 	},
-	"38": {
-		"include": {
-			"silverblue": [
-				"gnome-shell-extension-tailscale-status"
-			],
-			"dx": [
-				"distrobuilder",
-				"podman-plugins"
-			]
-		},
-		"exclude": {
-			"silverblue": [],
-			"dx": []
-		}
-	},
 	"39": {
 		"include": {
 			"all": [
