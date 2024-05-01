@@ -2,14 +2,14 @@ name: aurora 40
 on:
   merge_group:
   pull_request:
-    branches:
-      - main
-      - testing
+    # branches:
+    #   - main
+    #   - testing
     paths-ignore:
-      - '**.md'
-      - 'system_files/silverblue/**'
-  schedule:
-    - cron: '40 16 * * *'  # 16:40 UTC everyday
+      - "**.md"
+      - "system_files/silverblue/**"
+  # schedule:
+  #   - cron: '40 16 * * *'  # 16:40 UTC everyday
   workflow_dispatch:
 
 jobs:
