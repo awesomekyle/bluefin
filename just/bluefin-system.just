@@ -253,6 +253,22 @@ configure-vfio ACTION="":
       sudo /usr/libexec/bluefin-dx-kvmfr-setup
     fi
 
+# Change automatic power profile switching behavior
+configure-auto-power-profile ACTION="help":
+    #!/usr/bin/bash
+    source /usr/lib/ujust/ujust.sh
+    OPTION={{ ACTION }}
+    if [ "$OPTION" == "help" ]; then
+      echo "Usage: ujust configure-auto-power-profile <option>"
+      echo "  Use 'enable' to allow automatic power profile switching based on power state
+      echo "  Use 'disable' to prevent automatic power profile switching based on power state
+      exit 0
+    elif [[ "${OPTION,,}" =~ enable ]]; then
+      gnome-extensions enable auto-power-profile@dmy3k.github.io
+    elif [[ "${OPTION,,}" =~ disable ]]; then
+      gnome-extensions disable auto-power-profile@dmy3k.github.io
+    fi
+
 # Install system flatpaks for rebasers
 [private]
 install-system-flatpaks:
@@ -270,3 +286,9 @@ install-system-flatpaks:
 # Configure grub bootmenu visibility
 configure-grub:
     /usr/libexec/configure-grub.sh
+
+update-ng:
+    echo "Note: This command doesn't work if you have locally layered packages" 
+    sudo bootc upgrade
+    flatpak update -y
+    brew upgrade

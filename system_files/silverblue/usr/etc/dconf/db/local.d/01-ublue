@@ -170,6 +170,8 @@ palette='catppuccin-dynamic'
 label='Host'
 limit-scrollback=false
 
-[org/gnome/shell/extensions/power-profile-switcher]
+[org/gnome/shell/extensions/auto-power-profile]
 ac='balanced'
 bat='power-saver'
+notify=true
+lapmode=true
