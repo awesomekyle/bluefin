@@ -18,3 +18,4 @@ curl -s 'https://api.github.com/repos/be5invis/Iosevka/releases/latest' | \
     grep "PkgTTC-Iosevka-" | \
     xargs -n 1 curl -L -o /tmp/PkgTTC-Iosevka.zip --fail --silent --show-error
 unzip /tmp/PkgTTC-Iosevka.zip -d /usr/share/fonts/iosevka
+
