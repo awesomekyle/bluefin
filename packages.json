@@ -28,6 +28,7 @@
 				"rclone",
 				"restic",
 				"samba-dcerpc",
+				"perftest",
 				"tailscale",
 				"neovim",
 				"samba-ldb-ldap-modules",
