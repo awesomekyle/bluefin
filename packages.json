@@ -20,6 +20,7 @@
 				"gum",
 				"mesa-libGLU",
 				"kernel-devel",
+				"kernel-modules",
 				"mstflint",
 				"nerd-fonts",
 				"playerctl",
