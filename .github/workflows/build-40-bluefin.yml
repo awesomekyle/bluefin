@@ -6,20 +6,17 @@ on:
       - main
       - testing
     paths-ignore:
-      - '**.md'
-      - 'system_files/kinoite/**'
+      - "**.md"
+      - "system_files/kinoite/**"
   push:
     branches:
       - main
     paths-ignore:
-      - '**.md'
-      - 'system_files/kinoite/**'
+      - "**.md"
+      - "system_files/kinoite/**"
   schedule:
-    - cron: '40 17 * * *'  # 17:40 UTC everyday
+    - cron: "40 17 * * *" # 17:40 UTC everyday
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   build:
