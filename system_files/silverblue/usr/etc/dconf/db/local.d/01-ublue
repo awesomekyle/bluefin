@@ -170,9 +170,3 @@ default-profile-uuid='2871e8027773ae74d6c87a5f659bbc74'
 palette='catppuccin-dynamic'
 label='Host'
 limit-scrollback=false
-
-[org/gnome/shell/extensions/auto-power-profile]
-ac='balanced'
-bat='power-saver'
-notify=true
-lapmode=true
