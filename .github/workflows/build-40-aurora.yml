@@ -14,8 +14,8 @@ on:
     paths-ignore:
       - "**.md"
       - "system_files/silverblue/**"
-  # schedule:
-  #   - cron: '40 16 * * *'  # 16:40 UTC everyday
+  schedule:
+    - cron: "40 17 * * *" # 16:40 UTC everyday
   workflow_dispatch:
 
 jobs:
