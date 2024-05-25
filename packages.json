@@ -50,6 +50,7 @@
 				"fd-find",
 				"btop",
 				"libva-nvidia-driver",
+				"qperf",
 				"xterm",
 				"zsh"
 			],
