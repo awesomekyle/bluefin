@@ -127,6 +127,7 @@
 				"ubuntu-family-fonts",
 				"udica",
 				"virt-manager",
+				"coreos-installer",
 				"virt-viewer"
 			]
 		},
