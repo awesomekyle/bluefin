@@ -11,6 +11,7 @@
 				"gcc",
 				"hplip",
 				"ifuse",
+				"input-leap",
 				"input-remapper",
 				"libimobiledevice",
 				"libxcrypt-compat",
@@ -56,15 +57,20 @@
 				"zsh"
 			],
 			"silverblue": [
+				"simple-scan",
 				"gnome-shell-extension-appindicator",
 				"gnome-shell-extension-dash-to-panel",
+				"gnome-shell-extension-tailscale-gnome-qs",
 				"libgda-sqlite",
 				"libgda",
 				"libratbag-ratbagd",
+				"nautilus-gsconnect",
+				"nautilus-open-any-terminal",
 				"openssh-askpass",
 				"yaru-theme"
 			],
 			"kinoite": [
+				"skanpage",
 				"libadwaita-qt5",
 				"libadwaita-qt6",
 				"kde-runtime-docs",
@@ -87,6 +93,7 @@
 				"code",
 				"dbus-x11",
 				"edk2-ovmf",
+				"flatpak-builder",
 				"genisoimage",
 				"google-droid-sans-mono-fonts",
 				"google-go-mono-fonts",
@@ -127,14 +134,18 @@
 			"all": [
 				"firefox-langpacks",
 				"firefox",
+				"podman-docker",
 				"ublue-os-update-services"
 			],
 			"silverblue": [
 				"gnome-extensions-app",
 				"gnome-software-rpm-ostree",
+				"gnome-terminal-nautilus",
 				"gnome-tour"
 			],
 			"kinoite": [
+				"krfb",
+				"krfb-libs",
 				"plasma-welcome"
 			],
 			"dx": []
@@ -142,13 +153,8 @@
 	},
 	"39": {
 		"include": {
-			"all": [
-				"input-leap"
-			],
-			"silverblue": [
-				"gnome-shell-extension-tailscale-gnome-qs",
-				"nautilus-open-any-terminal"
-			],
+			"all": [],
+			"silverblue": [],
 			"dx": [
 				"distrobuilder",
 				"podman-plugins"
@@ -156,28 +162,19 @@
 		},
 		"exclude": {
 			"all": [],
-			"silverblue": [
-				"gnome-terminal-nautilus"
-			],
+			"silverblue": [],
 			"dx": []
 		}
 	},
 	"40": {
 		"include": {
-			"all": [
-				"input-leap"
-			],
-			"silverblue": [
-				"gnome-shell-extension-tailscale-gnome-qs",
-				"nautilus-open-any-terminal"
-			],
+			"all": [],
+			"silverblue": [],
 			"dx": []
 		},
 		"exclude": {
 			"all": [],
-			"silverblue": [
-				"gnome-terminal-nautilus"
-			],
+			"silverblue": [],
 			"dx": [
 				"containerd.io"
 			]

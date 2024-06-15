@@ -3,8 +3,8 @@ favorite-apps = ['org.gnome.Ptyxis.desktop', 'org.mozilla.firefox.desktop', 'org
 enabled-extensions = ['appindicatorsupport@rgcjonas.gmail.com', 'dash-to-panel@jderose9.github.com', 'tailscale@joaophi.github.com']
 
 [org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/bluefin/bluefin-spring-dynamic.xml'
-picture-uri-dark='file:///usr/share/backgrounds/bluefin/bluefin-spring-dynamic.xml'
+picture-uri='file:///usr/share/backgrounds/bluefin/bluefin-summer-dynamic.xml'
+picture-uri-dark='file:///usr/share/backgrounds/bluefin/bluefin-summer-dynamic.xml'
 picture-options='zoom'
 primary-color='000000'
 secondary-color='FFFFFF'
