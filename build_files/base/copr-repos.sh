@@ -81,3 +81,9 @@ rm /etc/yum.repos.d/_copr_sentry-switcheroo-control_discrete.repo
 
 # Add Nerd Fonts
 curl -Lo /etc/yum.repos.d/_copr_che-nerd-fonts-"${FEDORA_MAJOR_VERSION}".repo https://copr.fedorainfracloud.org/coprs/che/nerd-fonts/repo/fedora-"${FEDORA_MAJOR_VERSION}"/che-nerd-fonts-fedora-"${FEDORA_MAJOR_VERSION}".repo
+
+#
+# awesomekyle
+#
+curl -Lo /tmp/protonvpn.rpm "https://repo.protonvpn.com/fedora-$(cat /etc/fedora-release | cut -d\  -f 3)-stable/protonvpn-stable-release/protonvpn-stable-release-1.0.1-2.noarch.rpm"
+rpm-ostree install /tmp/protonvpn.rpm
