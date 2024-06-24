@@ -12,7 +12,7 @@ on:
         type: string
     outputs:
       images:
-        description: 'An array of images built and pushed to the registry'
+        description: "An array of images built and pushed to the registry"
         value: ${{ jobs.check.outputs.images }}
 env:
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
@@ -98,7 +98,7 @@ jobs:
 
       - name: Check just syntax
         uses: ublue-os/just-action@v1
-      
+
       - name: Generate tags
         id: generate-tags
         shell: bash
@@ -223,16 +223,17 @@ jobs:
           extra-args: |
             --target=${{ env.TARGET_NAME }}
 
-      - name: Sign kernel
-        uses: ublue-os/kernel-signer@v0.2.3
-        with:
-          image: ${{ steps.build_image.outputs.image }}
-          default-tag: ${{ env.DEFAULT_TAG }}
-          privkey: ${{ secrets.AKMOD_PRIVKEY_20230518 }}
-          pubkey: /etc/pki/akmods/certs/akmods-ublue.der
-          tags: ${{ steps.build_image.outputs.tags }}
-          kernel_suffix: ${{ env.KERNEL_SUFFIX }}
-          strip: false
+      # ak: dont sign kernel
+      # - name: Sign kernel
+      #   uses: ublue-os/kernel-signer@v0.2.3
+      #   with:
+      #     image: ${{ steps.build_image.outputs.image }}
+      #     default-tag: ${{ env.DEFAULT_TAG }}
+      #     privkey: ${{ secrets.AKMOD_PRIVKEY_20230518 }}
+      #     pubkey: /etc/pki/akmods/certs/akmods-ublue.der
+      #     tags: ${{ steps.build_image.outputs.tags }}
+      #     kernel_suffix: ${{ env.KERNEL_SUFFIX }}
+      #     strip: false
 
       # Workaround bug where capital letters in your GitHub username make it impossible to push to GHCR.
       # https://github.com/macbre/push-to-ghcr/issues/12
@@ -286,8 +287,7 @@ jobs:
           IMAGE_NAME: ${{ env.IMAGE_NAME }}
           IMAGE_FLAVOR: ${{ matrix.image_flavor }}
           FEDORA_VERSION: ${{ matrix.fedora_version }}
-        run:
-          echo "${IMAGE_REGISTRY}@${DIGEST}" > "${IMAGE_NAME}-${IMAGE_FLAVOR}-${FEDORA_VERSION}.txt"
+        run: echo "${IMAGE_REGISTRY}@${DIGEST}" > "${IMAGE_NAME}-${IMAGE_FLAVOR}-${FEDORA_VERSION}.txt"
 
       - name: Upload artifact
         if: github.event_name != 'pull_request'
