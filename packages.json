@@ -132,7 +132,8 @@
 				"udica",
 				"virt-manager",
 				"coreos-installer",
-				"virt-viewer"
+				"virt-viewer",
+				"ydotool"
 			]
 		},
 		"exclude": {
