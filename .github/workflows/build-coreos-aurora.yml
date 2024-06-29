@@ -1,4 +1,4 @@
-name: Bluefin Stable
+name: Aurora Stable
 on:
   pull_request:
     branches:
@@ -6,7 +6,7 @@ on:
       - testing
     paths-ignore:
       - '**.md'
-      - 'system_files/kinoite/**'
+      - 'system_files/silverblue/**'
   schedule:
     - cron: '41 5 * * 2'  # 5:41 UTC every Tuesday
   workflow_dispatch:
@@ -17,5 +17,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     secrets: inherit
     with:
-      brand_name: bluefin
+      brand_name: aurora
       fedora_version: stable
