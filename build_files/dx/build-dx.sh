@@ -9,6 +9,7 @@ set -ouex pipefail
 . /tmp/build/packages-dx.sh
 . /tmp/build/image-info.sh
 . /tmp/build/fetch-install-dx.sh
+. /tmp/build/fonts-dx.sh
 . /tmp/build/workarounds.sh
 . /tmp/build/systemd-dx.sh
 . /tmp/build/branding-dx.sh

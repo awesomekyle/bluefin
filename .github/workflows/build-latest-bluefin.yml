@@ -1,19 +1,19 @@
-name: Aurora 40
+name: Bluefin Latest
 on:
   merge_group:
   pull_request:
-    # branches:
-    #   - main
-    #   - testing
+    branches:
+      - main
+      - testing
     paths-ignore:
       - "**.md"
-      - "system_files/silverblue/**"
+      - "system_files/kinoite/**"
   push:
     branches:
       - main
     paths-ignore:
       - "**.md"
-      - "system_files/silverblue/**"
+      - "system_files/kinoite/**"
   schedule:
     - cron: "40 4 * * *" # 4:40 UTC everyday
   workflow_dispatch:
@@ -24,5 +24,5 @@ jobs:
     uses: ./.github/workflows/reusable-build.yml
     secrets: inherit
     with:
-      brand_name: aurora
-      fedora_version: 40
+      brand_name: bluefin
+      fedora_version: latest
