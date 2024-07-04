@@ -21,6 +21,7 @@
 				"lm_sensors",
 				"make",
 				"bat",
+				"fio",
 				"glow",
 				"gum",
 				"wireshark",
