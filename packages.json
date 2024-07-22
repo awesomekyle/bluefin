@@ -30,6 +30,7 @@
 				"kernel-modules",
 				"mstflint",
 				"nerd-fonts",
+				"opendyslexic-fonts",
 				"playerctl",
 				"pulseaudio-utils",
 				"python3-pip",
@@ -177,7 +178,9 @@
 	},
 	"40": {
 		"include": {
-			"all": [],
+			"all": [
+				"ptyxis"
+			],
 			"silverblue": [],
 			"dx": []
 		},
