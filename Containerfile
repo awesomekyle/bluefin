@@ -51,7 +51,7 @@ RUN --mount=type=cache,dst=/var/cache/rpm-ostree \
     rpm-ostree cliwrap install-to-root / && \
     mkdir -p /var/lib/alternatives && \
     /ctx/build_files/build-base.sh && \
-    /ctx/build_files/build-custom.sh && \
+    /tmp/build/build-custom.sh && \
     mv /var/lib/alternatives /staged-alternatives && \
     /ctx/build_files/clean-stage.sh && \
     ostree container commit && \
