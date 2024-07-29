@@ -81,7 +81,6 @@
 				"libadwaita-qt6",
 				"kde-runtime-docs",
 				"kdenetwork-filesharing",
-				"kdeplasma-addons",
 				"plasma-wallpapers-dynamic"
 			],
 			"dx": [
@@ -132,6 +131,7 @@
 				"qemu",
 				"rocm-hip",
 				"rocm-opencl",
+				"rocm-smi",
 				"ubuntu-family-fonts",
 				"udica",
 				"umoci",
