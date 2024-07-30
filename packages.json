@@ -20,6 +20,8 @@
 				"libxcrypt-compat",
 				"lm_sensors",
 				"make",
+				"libavcodec-freeworld",
+				"nvidia-vaapi-driver",
 				"bat",
 				"fio",
 				"glow",
