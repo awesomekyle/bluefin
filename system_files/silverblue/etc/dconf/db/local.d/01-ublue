@@ -119,6 +119,7 @@ sort-directories-first=true
 [org/gnome/mutter]
 experimental-features=['scale-monitor-framebuffer']
 overlay-key='Super_R'
+check-alive-timeout=uint32 20000
 
 [org/gnome/software]
 allow-updates=false
