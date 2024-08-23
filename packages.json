@@ -117,6 +117,7 @@
 				"jetbrains-mono-fonts-all",
 				"kcli",
 				"libvirt",
+				"libvirt-nss",
 				"lxc",
 				"mozilla-fira-mono-fonts",
 				"p7zip-plugins",
