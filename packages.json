@@ -2,6 +2,7 @@
 	"all": {
 		"include": {
 			"all": [
+				"adcli",
 				"bash-color-prompt",
 				"bcache-tools",
 				"bootc",
@@ -10,6 +11,7 @@
 				"fish",
 				"firewall-config",
 				"foo2zjs",
+				"freeipa-client",
 				"fuse-encfs",
 				"gcc",
 				"hplip",
@@ -19,6 +21,7 @@
 				"input-remapper",
 				"libimobiledevice",
 				"libxcrypt-compat",
+				"libsss_autofs",
 				"lm_sensors",
 				"make",
 				"libavcodec-freeworld",
@@ -33,6 +36,7 @@
 				"kernel-modules",
 				"mstflint",
 				"nerd-fonts",
+				"oddjob-mkhomedir",
 				"opendyslexic-fonts",
 				"playerctl",
 				"pulseaudio-utils",
@@ -48,6 +52,10 @@
 				"samba-winbind-modules",
 				"samba",
 				"solaar",
+				"sssd-ad",
+				"sssd-ipa",
+				"sssd-krb5",
+				"sssd-nfs-idmap",
 				"stress-ng",
 				"tmux",
 				"usbmuxd",
@@ -92,7 +100,9 @@
 			"dx": [
 				"adobe-source-code-pro-fonts",
 				"android-tools",
+				"bcc",
 				"bpftop",
+				"bpftrace",
 				"cascadia-code-fonts",
 				"ceph",
 				"cockpit-machines",
@@ -108,6 +118,7 @@
 				"edk2-ovmf",
 				"flatpak-builder",
 				"genisoimage",
+				"git-credential-libsecret",
 				"google-droid-sans-mono-fonts",
 				"google-go-mono-fonts",
 				"ibm-plex-mono-fonts",
@@ -120,6 +131,8 @@
 				"libvirt-nss",
 				"lxc",
 				"mozilla-fira-mono-fonts",
+				"nicstat",
+				"numactl",
 				"p7zip-plugins",
 				"p7zip",
 				"podman-compose",
@@ -139,6 +152,9 @@
 				"rocm-hip",
 				"rocm-opencl",
 				"rocm-smi",
+				"sysprof",
+				"tiptop",
+				"trace-cmd",
 				"ubuntu-family-fonts",
 				"udica",
 				"umoci",
@@ -185,7 +201,8 @@
 	"40": {
 		"include": {
 			"all": [
-				"ptyxis"
+				"ptyxis",
+				"scx-scheds"
 			],
 			"silverblue": [],
 			"dx": []

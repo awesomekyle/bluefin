@@ -82,33 +82,6 @@ devmode:
         fi
     fi
 
-alias shell := configure-shell
-
-# Switch to a different shell
-configure-shell ACTION="":
-    #!/bin/bash
-    source /usr/lib/ujust/ujust.sh
-    CURRENT_SHELL="$(cat /etc/passwd | grep ":$UID:" | cut '-d:' '-f7')"
-    OPTION={{ ACTION }}
-    if [ "$OPTION" == "help" ]; then
-      echo "Usage: ujust shell <option>"
-      echo "  <option>: Specify the quick option to skip the prompt"
-      echo "  Use 'fish' to select fish"
-      echo "  Use 'zsh' to select zsh"
-      echo "  Use 'bash' to select bash"
-      exit 0
-    elif [ "$OPTION" == "" ]; then
-      echo "${bold}Shell configuration${normal}"
-      echo "${USER}'s shell is currently ${CURRENT_SHELL}"
-      OPTION=$(Choose "fish" "zsh" "bash")
-    fi
-    if [ -z "$OPTION" ]; then
-      exit 0
-    else
-      sudo usermod $USER --shell /usr/bin/$OPTION
-      printf "${USER}'s shell is now %s.\n" "$(cat /etc/passwd | grep ":$UID:" | cut '-d:' '-f7')"
-    fi
-
 alias gnome-vrr := toggle-gnome-vrr
 
 # Enable or Disable Gnome-VRR
@@ -203,7 +176,7 @@ configure-vfio ACTION="":
         if [[ ${CPU_VENDOR} == "AuthenticAMD" ]]; then
           VENDOR_KARG="amd_iommu=on"
         elif [[ ${CPU_VENDOR} == "GenuineIntel" ]]; then
-          VENDOR_KARG="intel_iommu=on"  
+          VENDOR_KARG="intel_iommu=on"
         fi
         if [[ ${VENDOR_KARG} == "unset" ]]; then
           echo "Failed to get CPU vendor, exiting..."
@@ -277,7 +250,7 @@ alias rollback-helper := rebase-helper
 alias switch-channel := rebase-helper
 
 update-ng:
-    echo "Note: This command doesn't work if you have locally layered packages" 
+    echo "Note: This command doesn't work if you have locally layered packages"
     sudo bootc upgrade
     flatpak update -y
     brew upgrade
@@ -293,7 +266,7 @@ toggle-tailscale:
 
     if [ "$TAILSCALED_STATUS" == "enabled" ] || [ "$TAILSCALED_STATUS" == "disabled" ]; then
         TAILSCALED="Installed"
-    else 
+    else
         TAILSCALED="Not Found"
         echo "${b}${red}Unable to enable or disable Tailscale.${n}"
         echo "The tailscaled service must be present and either enabled or disabled to run this script."
