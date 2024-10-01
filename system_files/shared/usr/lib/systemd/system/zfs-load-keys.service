@@ -1,0 +1,15 @@
+[Unit]
+Description=Load ZFS keys
+DefaultDependencies=no
+Before=zfs-mount.service
+After=zfs-import.target
+Requires=zfs-import.target
+ConditionPathExists=/var/home/kyle/.zfs_key
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/sbin/zfs load-key -a
+
+[Install]
+WantedBy=zfs-mount.service
