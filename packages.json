@@ -5,6 +5,7 @@
 				"adcli",
 				"bash-color-prompt",
 				"bcache-tools",
+				"borgbackup",
 				"bootc",
 				"evtest",
 				"fastfetch",
@@ -14,6 +15,9 @@
 				"freeipa-client",
 				"fuse-encfs",
 				"gcc",
+				"git-credential-libsecret",
+				"glow",
+				"gum",
 				"hplip",
 				"krb5-workstation",
 				"ifuse",
@@ -51,6 +55,7 @@
 				"samba-winbind-clients",
 				"samba-winbind-modules",
 				"samba",
+				"setools-console",
 				"solaar",
 				"sssd-ad",
 				"sssd-ipa",
@@ -74,28 +79,29 @@
 				"zsh"
 			],
 			"silverblue": [
-				"simple-scan",
+				"cryfs",
 				"gnome-shell-extension-appindicator",
 				"gnome-shell-extension-dash-to-panel",
 				"gnome-shell-extension-tailscale-gnome-qs",
-				"libgda-sqlite",
 				"libgda",
+				"libgda-sqlite",
 				"libratbag-ratbagd",
 				"nautilus-gsconnect",
 				"nautilus-open-any-terminal",
 				"openssh-askpass",
+				"simple-scan",
 				"yaru-theme",
 				"zenity"
 			],
 			"kinoite": [
-				"skanpage",
-				"libadwaita-qt5",
-				"libadwaita-qt6",
 				"kde-runtime-docs",
 				"kdenetwork-filesharing",
 				"kdeplasma-addons",
 				"kdialog",
-				"plasma-wallpapers-dynamic"
+				"libadwaita-qt5",
+				"libadwaita-qt6",
+				"plasma-wallpapers-dynamic",
+				"skanpage"
 			],
 			"dx": [
 				"adobe-source-code-pro-fonts",
@@ -118,7 +124,6 @@
 				"edk2-ovmf",
 				"flatpak-builder",
 				"genisoimage",
-				"git-credential-libsecret",
 				"google-droid-sans-mono-fonts",
 				"google-go-mono-fonts",
 				"ibm-plex-mono-fonts",
@@ -161,6 +166,7 @@
 				"virt-manager",
 				"coreos-installer",
 				"virt-viewer",
+				"virt-v2v",
 				"ydotool"
 			]
 		},
@@ -201,8 +207,7 @@
 	"40": {
 		"include": {
 			"all": [
-				"ptyxis",
-				"scx-scheds"
+				"ptyxis"
 			],
 			"silverblue": [],
 			"dx": []
